@@ -26,22 +26,26 @@ class MapPatternTest < Minitest::Test
     numbers = [1, 2, 3, 4, 5]
     squares = []
     numbers.each do |number|
-      squares << (number ** 2)
+      squares << (number**2)
     end
     assert_equal [1, 4, 9, 16, 25], squares
   end
 
   def test_lengths
-    skip
     names = ["alice", "bob", "charlie", "david", "eve"]
-    # Your code goes here
+    lengths = []
+    names.each do |length|
+      lengths << length.length
+    end
     assert_equal [5, 3, 7, 5, 3], lengths
   end
 
   def test_normalize_zip_codes
-    skip
     numbers = [234, 10, 9119, 38881]
-    # Your code goes here
+    zip_codes = []
+    numbers.each do |number|
+      zip_codes << number.to_s
+    end
     assert_equal ["00234", "00010", "09119", "38881"], zip_codes
   end
 
